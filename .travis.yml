@@ -1,0 +1,11 @@
+language: objective-c
+before_install:
+  - brew tap homebrew/science
+  - brew update
+  - brew install vips --with-webp --with-graphicsmagick
+install:
+  - git clone https://github.com/lovell/sharp.git
+script:  
+  - cd sharp
+  - npm install
+  - npm test
